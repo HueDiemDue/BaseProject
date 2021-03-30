@@ -7,38 +7,14 @@ import {
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 
-export default class SettingScreen extends React.Component {
-
-  constructor(props) {
-    super(props)
-    Navigation.events().bindComponent(this)
-
-    this.state = {
-    }
-  }
-
-  componentDidAppear() {
-    if (!this.didAppearFirst) {
-      this.didAppearFirst = true
-    }
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  render() {
-
-    return (
-      <View style={styles.container}>
-        <SafeAreaView style={styles.body}>
-          <Text>SettingScreen</Text>
-        </SafeAreaView>
-      </View>
-    )
-  }
+export default SettingScreen = props => {
+  return (
+    <View style={styles.container}>
+      <SafeAreaView style={styles.body}>
+        <Text>SettingScreen</Text>
+      </SafeAreaView>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({

@@ -4,41 +4,29 @@ import {
   StyleSheet,
   SafeAreaView,
   Text,
+  BackHandler,
 } from 'react-native'
-import { Navigation } from 'react-native-navigation'
+import { useNavigationAppearEvents } from '../hooks'
 
-export default class HomeScreen extends React.Component {
+export default HomeScreen = props => {
+  const { componentId } = props
 
-  constructor(props) {
-    super(props)
-    Navigation.events().bindComponent(this)
+  useNavigationAppearEvents(componentId, {
+    componentDidAppear: () => {
+      BackHandler.exitApp()
+    },
+    componentDidDisappear: () => {
 
-    this.state = {
     }
-  }
-
-  componentDidAppear() {
-    if (!this.didAppearFirst) {
-      this.didAppearFirst = true
-    }
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  render() {
-
-    return (
-      <View style={styles.container}>
-        <SafeAreaView style={styles.body}>
-          <Text>HomeScreen</Text>
-        </SafeAreaView>
-      </View>
-    )
-  }
+  })
+  
+  return (
+    <View style={styles.container}>
+      <SafeAreaView style={styles.body}>
+        <Text>HomeScreen</Text>
+      </SafeAreaView>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({

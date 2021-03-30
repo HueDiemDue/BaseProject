@@ -2,43 +2,38 @@ import React from 'react'
 import {
   View,
   StyleSheet,
-  SafeAreaView,
   Text,
 } from 'react-native'
-import { Navigation } from 'react-native-navigation'
+import { setRootHomeScreen } from '../navigator'
+import { useNavigationAppearEvents } from '../hooks'
+import { LoadingIndicator } from '../components'
+import Colors from '../constants/colors'
 
-export default class SplashScreen extends React.Component {
+export default SplashScreen = props => {
 
-  constructor(props) {
-    super(props)
-    Navigation.events().bindComponent(this)
+  const { componentId } = props
 
-    this.state = {
+  useNavigationAppearEvents(componentId, {
+    componentDidAppear: () => {
+      setTimeout(() => {
+        setRootHomeScreen()
+      }, 2000)
+    },
+    componentDidDisappear: () => {
+
     }
-  }
+  })
 
-  componentDidAppear() {
-    if (!this.didAppearFirst) {
-      this.didAppearFirst = true
-    }
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  render() {
-
-    return (
-      <View style={styles.container}>
-        <SafeAreaView style={styles.body}>
-          <Text>SplashScreen</Text>
-        </SafeAreaView>
+  return (
+    <View style={styles.container}>
+      <View style={styles.body}>
+        <LoadingIndicator
+          size={'large'}
+        />
+        <Text style={styles.text}>Hello</Text>
       </View>
-    )
-  }
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -47,6 +42,13 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.blue_1
   },
+  text: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: Colors.black
+  }
 })

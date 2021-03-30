@@ -7,10 +7,15 @@ export const setRootSplashScreen = () => Navigation.setRoot({
       children: [
         {
           component: {
+            id: 'splash',
             name: ScreenName.splash,
             options: {
               statusBar: {
                 drawBehind: true,
+                visible: false,
+              },
+              layout: {
+                orientation: ['portrait'],
               },
             }
           }

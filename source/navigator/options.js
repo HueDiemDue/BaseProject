@@ -13,8 +13,8 @@ export const defaultOptions = {
   },
   bottomTab: {
     fontSize: 12,
-    selectedTextColor: Colors.red,
-    selectedIconColor: Colors.red,
+    selectedTextColor: Colors.green,
+    selectedIconColor: Colors.green,
     iconColor: Colors.black,
     textColor: Colors.black
   },
@@ -22,5 +22,8 @@ export const defaultOptions = {
     setRoot: {
       waitForRender: true
     },
+  },
+  topBar: {
+    visible: false,
   }
 }
