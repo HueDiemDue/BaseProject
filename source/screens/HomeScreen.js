@@ -12,8 +12,8 @@ import Colors from '../styles/colors'
 import { useNavigationAppearEvents } from '../hooks'
 import {
   Button,
-  TextInputForm,
 } from '../components'
+import { getBackgroundColor } from '../utils/Helper'
 
 const HomeScreen = props => {
   const { componentId } = props
@@ -39,27 +39,27 @@ const HomeScreen = props => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={styles.body}>
           <Text style={styles.text}>Environment: {Config.ENV}</Text>
-          {/* <TextInputForm
-            value={value}
-            style={styles.textInput}
-          /> */}
-          <View style={{
-            backgroundColor: value % 2 !== 0 ? 'red' : 'green',
-            height: 100,
-            width: 100,
-            marginTop: 24
-          }}
-          />
+
+          <View style={{ alignItems: 'center' }}>
+            <View style={{
+              backgroundColor: getBackgroundColor(value),
+              height: 100,
+              width: 100,
+              marginTop: 24
+            }}
+            />
+          </View>
 
           <Button
-            text={'Counter'}
+            text={'Change background'}
             style={styles.button}
-            onPress={this.onChangeBackground} />
+            onPress={onChangeBackground} />
         </View>
       </SafeAreaView>
     </View>
   )
 }
+
 export default HomeScreen
 
 const styles = StyleSheet.create({

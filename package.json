@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
     "react": "16.11.0",
     "react-native": "^0.64.0",
     "react-native-config": "^1.4.2",
@@ -28,9 +29,13 @@
     "eslint-plugin-react": "^7.23.1",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.11.0"
+    "react-test-renderer": "^16.11.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleDirectories": [
+      "node_modules",
+      "source"
+    ]
   }
 }
