@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 
-export default SettingScreen = props => {
+const SettingScreen = props => {
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.body}>
@@ -16,6 +16,8 @@ export default SettingScreen = props => {
     </View>
   )
 }
+
+export default SettingScreen
 
 const styles = StyleSheet.create({
   container: {

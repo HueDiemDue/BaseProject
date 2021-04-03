@@ -7,6 +7,8 @@ target 'BaseProject' do
   config = use_native_modules!
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   use_flipper!
   post_install do |installer|
     flipper_post_install(installer)

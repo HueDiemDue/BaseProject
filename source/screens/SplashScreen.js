@@ -7,9 +7,9 @@ import {
 import { setRootHomeScreen } from '../navigator'
 import { useNavigationAppearEvents } from '../hooks'
 import { LoadingIndicator } from '../components'
-import Colors from '../constants/colors'
+import Colors from '../styles/colors'
 
-export default SplashScreen = props => {
+const SplashScreen = props => {
 
   const { componentId } = props
 
@@ -35,6 +35,8 @@ export default SplashScreen = props => {
     </View>
   )
 }
+
+export default SplashScreen
 
 const styles = StyleSheet.create({
   container: {

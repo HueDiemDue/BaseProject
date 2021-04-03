@@ -1,5 +1,7 @@
 apply plugin: "com.android.application"
 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+    
 import com.android.build.OutputFile
 
 /**
@@ -132,8 +134,9 @@ android {
         applicationId "com.baseproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode project.env.get("VER_CODE").toInteger()
+        versionName project.env.get("VER_NAME")
+        resValue "string", "build_config_package", "com.baseproject"
     }
     splits {
         abi {

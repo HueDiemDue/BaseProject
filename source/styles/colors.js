@@ -1,4 +1,5 @@
 export default Colors = {
+  white: 'white',
   red: 'red',
   black: 'black',
   yellow: 'yellow',

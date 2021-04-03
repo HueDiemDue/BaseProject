@@ -1,7 +1,7 @@
 
 import { Navigation } from 'react-native-navigation'
 import { AppState } from 'react-native'
-import { registerScreens } from './configs/screens-register'
+import { registerScreens } from './screen-configs/screens-register'
 import { defaultOptions } from './navigator/options'
 import { setRootSplashScreen, setRootHomeScreen } from './navigator'
 
@@ -14,9 +14,9 @@ Navigation.events().registerAppLaunchedListener(async () => {
 })
 
 Navigation.events().registerComponentDidAppearListener(({ componentId, componentName }) => {
-  console.log('registerComponentDidAppearListener: ' + componentId + " " + componentName)
+  console.log('registerComponentDidAppearListener: ' + componentId + ' ' + componentName)
 });
 
 Navigation.events().registerComponentDidDisappearListener(({ componentId, componentName }) => {
-  console.log('registerComponentDidAppearListener: ' + componentId + " " + componentName)
+  console.log('registerComponentDidAppearListener: ' + componentId + ' ' + componentName)
 });

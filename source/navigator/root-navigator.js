@@ -1,5 +1,5 @@
 import { Navigation } from 'react-native-navigation'
-import ScreenName from '../configs/screens-name'
+import ScreenName from '../screen-configs/screens-name'
 
 export const setRootSplashScreen = () => Navigation.setRoot({
   root: {

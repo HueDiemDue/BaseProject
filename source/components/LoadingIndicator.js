@@ -4,7 +4,7 @@ import {
   Platform
 } from 'react-native'
 import _ from 'lodash'
-import Colors from '../constants/colors'
+import Colors from '../styles/colors'
 import CommonStyles from '../styles/styles'
 
 export default LoadingIndicator = props => {
