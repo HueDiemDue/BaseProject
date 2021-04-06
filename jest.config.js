@@ -15,19 +15,17 @@ module.exports = {
     '|@react-native' +
     '|react-native' +
     '|react-native-config' +
+    '|react-native-mock-render' +
     ')/)',
   ],
-  setupFiles: ['./jest.setup.js'],
+  setupFiles: ['./jest.setup.js', '<rootDir>/src/setupTests.js'],
   moduleDirectories: [
     'node_modules',
     // 'source'
   ],
-  // 'snapshotSerializers': [
-  //   'enzyme-to-json/serializer'
-  // ],
-  // 'setupFiles': [
-  //   'raf/polyfill',
-  //   '<rootDir>/test/setupTests.js'
-  // ],
-
+  unmockedModulePathPatterns: [
+    'node_modules/react/',
+    'node_modules/enzyme/'
+  ],
+  testEnvironment: 'jsdom'
 }

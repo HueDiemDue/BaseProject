@@ -1,3 +1,4 @@
+
 import { validateNumber } from '../../src/utils/ValidateHelper'
 
 describe('check validate number', () => {

@@ -8,11 +8,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-native": "^0.64.0",
     "react-native-config": "^1.4.2",
     "react-native-navigation": "7.0.0-snapshot.1206"
@@ -24,11 +26,18 @@
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.23.1",
     "jest": "^26.6.3",
+    "jsdom": "16.5.2",
+    "jsdom-global": "3.0.2",
     "metro-react-native-babel-preset": "^0.59.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "react-native-mock-render": "^0.1.9",
     "react-test-renderer": "^17.0.2"
   }
 }

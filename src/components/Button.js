@@ -8,13 +8,17 @@ import _ from 'lodash'
 import Colors from '../styles/colors'
 
 const Button = props => {
-  const { text, style, onPress } = props
+  const { title, style, onPress } = props
+
+  const onPressButton = () => {
+    onPress && onPress()
+  }
 
   return (
     <TouchableOpacity
       style={[styles.container, style]}
-      onPress={onPress}>
-      <Text style={styles.text}>{text}</Text>
+      onPress={onPressButton}>
+      <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   )
 }
@@ -22,7 +26,7 @@ const Button = props => {
 Button.defaultProps = {
   value: '',
   style: null,
-  text: 'Press me',
+  title: 'Press me',
   onPress: null
 }
 
@@ -32,11 +36,11 @@ const styles = StyleSheet.create({
     padding: 24,
     alignItems: 'center'
   },
-  text: {
-    fontSize: 12,
-    color: Colors.white,
-    textAlign: 'center'
-  }
+  // text: {
+  //   fontSize: 12,
+  //   color: Colors.white,
+  //   textAlign: 'center'
+  // }
 })
 
 export default Button
