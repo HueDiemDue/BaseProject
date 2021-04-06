@@ -7,12 +7,12 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
-    "react": "16.11.0",
+    "react": "^16.14.0",
     "react-native": "^0.64.0",
     "react-native-config": "^1.4.2",
     "react-native-navigation": "7.0.0-snapshot.1206"
@@ -23,19 +23,12 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
-    "babel-jest": "^26.0.1",
+    "babel-jest": "^26.6.3",
     "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.23.1",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "^16.11.0"
-  },
-  "jest": {
-    "preset": "react-native",
-    "moduleDirectories": [
-      "node_modules",
-      "source"
-    ]
+    "react-test-renderer": "^17.0.2"
   }
 }

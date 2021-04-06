@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components > Button Render a snapshot for Button use renderer 1`] = `
+exports[`Components > Button render Render a snapshot for Button use renderer 1`] = `
 <View
   accessible={true}
   focusable={true}

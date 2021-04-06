@@ -1,9 +1,9 @@
 import { Navigation } from 'react-native-navigation'
 import ScreenName from './screens-name'
 
-import HomeScreen from '../screens/HomeScreen'
-import SettingScreen from '../screens/SettingScreen'
-import SplashScreen from '../screens/SplashScreen'
+import HomeScreen from '../screens/home/HomeScreen'
+import SettingScreen from '../screens/setting/SettingScreen'
+import SplashScreen from '../screens/splash/SplashScreen'
 
 export function registerScreens() {
   //registerComponent

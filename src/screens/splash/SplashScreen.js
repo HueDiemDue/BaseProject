@@ -4,10 +4,10 @@ import {
   StyleSheet,
   Text,
 } from 'react-native'
-import { setRootHomeScreen } from '../navigator'
-import { useNavigationAppearEvents } from '../hooks'
-import { LoadingIndicator } from '../components'
-import Colors from '../styles/colors'
+import { setRootHomeScreen } from '../../navigator'
+import { useNavigationAppearEvents } from '../../hooks'
+import { LoadingIndicator } from '../../components'
+import Colors from '../../styles/colors'
 
 const SplashScreen = props => {
 

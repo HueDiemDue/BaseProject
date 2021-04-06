@@ -8,12 +8,12 @@ import {
   TextInput,
 } from 'react-native'
 import Config from 'react-native-config'
-import Colors from '../styles/colors'
-import { useNavigationAppearEvents } from '../hooks'
+import Colors from '../../styles/colors'
+import { useNavigationAppearEvents } from '../../hooks'
 import {
   Button,
-} from '../components'
-import { getBackgroundColor } from '../utils/Helper'
+} from '../../components'
+import { getBackgroundColor } from '../../utils/Helper'
 
 const HomeScreen = props => {
   const { componentId } = props

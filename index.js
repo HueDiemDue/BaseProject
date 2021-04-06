@@ -1,1 +1,1 @@
-require('./source/index')
+require('./src/index')
