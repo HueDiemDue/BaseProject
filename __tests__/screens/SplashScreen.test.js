@@ -11,5 +11,26 @@ describe('Screens > SplashScreen', () => {
     })
   })
 
-  
+  // describe('componentDidMount', () => {
+  //   let wrapper
+
+  //   beforeEach(() => {
+  //     wrapper = mount(<SplashScreen />)
+  //   })
+  //   test('should call componentDidMount lifecycle method', () => {
+  //     // const instance = wrapper.instance()
+  //     // // instance.componentDidMount = jest.fn()
+  //     // const spy = jest.spyOn(instance, 'directScreen')
+  //     // wrapper.instance().forceUpdate()
+  //     // // wrapper.update()
+  //     // // instance.componentDidMount()
+
+  //     // expect(spy).toHaveBeenCalledTimes(1)
+
+  //   })
+  // })
 })
+
+// afterEach(() => {
+//   spy.mockClear()
+// })

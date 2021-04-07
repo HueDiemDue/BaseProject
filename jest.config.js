@@ -15,7 +15,6 @@ module.exports = {
     '|@react-native' +
     '|react-native' +
     '|react-native-config' +
-    '|react-native-mock-render' +
     '|react-native-navigation' +
     '|@react-native-community/async-storage' +
     ')/)',
