@@ -1,3 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components > Button render Render a snapshot for Button use renderer 1`] = `ReactWrapper {}`;
+exports[`Components > Button render Render a snapshot for Button use renderer 1`] = `
+<Button
+  onPress={null}
+  style={null}
+  title="Press me"
+  value=""
+>
+  <TouchableOpacity
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "green",
+          "padding": 24,
+        },
+        null,
+      ]
+    }
+  >
+    <react-native-mock>
+      <Text>
+        <react-native-mock>
+          Press me
+        </react-native-mock>
+      </Text>
+    </react-native-mock>
+  </TouchableOpacity>
+</Button>
+`;

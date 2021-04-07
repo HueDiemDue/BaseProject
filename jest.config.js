@@ -28,5 +28,6 @@ module.exports = {
     'node_modules/react/',
     'node_modules/enzyme/'
   ],
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  snapshotSerializers: ['enzyme-to-json/serializer']
 }
