@@ -16,6 +16,8 @@ module.exports = {
     '|react-native' +
     '|react-native-config' +
     '|react-native-mock-render' +
+    '|react-native-navigation' +
+    '|@react-native-community/async-storage' +
     ')/)',
   ],
   setupFiles: ['./jest.setup.js', '<rootDir>/src/setupTests.js'],

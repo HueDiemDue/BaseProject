@@ -8,8 +8,8 @@ describe('Components > Button', () => {
   describe('render', () => {
     test('Render a snapshot for Button use renderer', () => {
 
-      const wrapped = mount(<Button />)
-      expect(wrapped).toMatchSnapshot()
+      const wrapper = mount(<Button />)
+      expect(wrapper).toMatchSnapshot()
     })
 
     describe('props', () => {
@@ -18,18 +18,18 @@ describe('Components > Button', () => {
           title: 'Click me',
           onPress: jest.fn()
         }
-        const wrapped = mount(
+        const wrapper = mount(
           <Button
             {...props}
           />
         )
-        expect(wrapped.length).toBe(1)
-        const text = wrapped.find('Text')
+        expect(wrapper.length).toBe(1)
+        const text = wrapper.find('Text')
         expect(text).toHaveLength(1) // find component has 1 text 
         // expect(text.render().text()).toBe('Click me')
-        expect(wrapped.props().title).toBe('Click me')
-        expect(wrapped.props().style).toBe(null)
-        expect(wrapped.props().onPress).toBe(props.onPress)
+        expect(wrapper.props().title).toBe('Click me')
+        expect(wrapper.props().style).toBe(null)
+        expect(wrapper.props().onPress).toBe(props.onPress)
       })
     })
 

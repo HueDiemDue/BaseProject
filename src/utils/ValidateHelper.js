@@ -3,7 +3,7 @@ export const validateNumber = value => {
   return reg.test(value)
 }
 
-export const validateAlphanumeric = value => {
-  const reg = /^\w+$/g
-  return reg.test(value)
-}
+// export const validateAlphanumeric = value => {
+//   const reg = /^\w+$/g
+//   return reg.test(value)
+// }

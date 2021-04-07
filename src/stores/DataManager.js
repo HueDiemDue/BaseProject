@@ -2,12 +2,12 @@ import AsyncStorage from '@react-native-community/async-storage'
 
 const APP_PREFIX = 'BASE_'
 
-const saveValue = async (value, key) => {
+export const saveValue = async (value, key) => {
   const app_key = `${APP_PREFIX}${key}`
 
   try {
     if (value) {
-      await AsyncStorage.setItem(app_key, value.toString());
+      await AsyncStorage.setItem(app_key, value)
     } else {
       await AsyncStorage.removeItem(app_key)
     }
@@ -17,23 +17,17 @@ const saveValue = async (value, key) => {
   }
 }
 
-const getValue = async (key) => {
+export const getValue = async (key) => {
   const app_key = `${APP_PREFIX}${key}`
-  let value = null;
+  let value = null
 
   try {
-    value = await AsyncStorage.getItem(app_key);
+    value = await AsyncStorage.getItem(app_key)
     if (value) {
       return Promise.resolve(value)
     }
   } catch (error) {
-
   }
 
   return Promise.reject(value)
-}
-
-export default {
-  getValue,
-  saveValue,
 }

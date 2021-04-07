@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617709796625" clover="3.2.0">
-  <project timestamp="1617709796625" name="All files">
-    <metrics statements="17" coveredstatements="15" conditionals="10" coveredconditionals="8" methods="4" coveredmethods="3" elements="31" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="3" files="7" classes="7"/>
+<coverage generated="1617771745274" clover="3.2.0">
+  <project timestamp="1617771745274" name="All files">
+    <metrics statements="39" coveredstatements="36" conditionals="16" coveredconditionals="14" methods="8" coveredmethods="7" elements="63" coveredelements="57" complexity="0" loc="39" ncloc="39" packages="4" files="9" classes="9"/>
     <package name="components">
-      <metrics statements="14" coveredstatements="12" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="2"/>
+      <metrics statements="16" coveredstatements="14" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="3"/>
       <file name="Button.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/components/Button.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
       </file>
       <file name="LoadingIndicator.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/components/LoadingIndicator.js">
         <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -31,6 +33,29 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
+    <package name="stores">
+      <metrics statements="17" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="DataManager.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/stores/DataManager.js">
+        <metrics statements="17" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="styles">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="colors.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/styles/colors.js">
@@ -41,12 +66,18 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="Helper.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/utils/Helper.js">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="ValidateHelper.js" path="/Users/nguyen.thi.huec/Documents/hue/react-native-base/src/utils/ValidateHelper.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
     </package>
   </project>

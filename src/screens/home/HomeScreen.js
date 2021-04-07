@@ -14,11 +14,15 @@ import {
   Button,
 } from '../../components'
 import { getBackgroundColor } from '../../utils/Helper'
+import { getValue, saveValue } from '../../stores/DataManager'
+
+const BACKGROUND_COLOR = 'BACKGROUND_COLOR'
 
 const HomeScreen = props => {
   const { componentId } = props
 
   const [value, setValue] = useState(0)
+  const backgroundColor = getBackgroundColor(value)
 
   useNavigationAppearEvents(componentId, {
     componentDidAppear: () => {
@@ -31,18 +35,18 @@ const HomeScreen = props => {
 
   onChangeBackground = () => {
     setValue(value + 1)
+    // saveValue(backgroundColor, BACKGROUND_COLOR)
   }
-  console.log('value', value, value % 2)
 
   return (
     <View style={styles.container}>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={styles.body}>
-          <Text style={styles.text}>Environment: {Config.ENV}</Text>
+          {/* <Text style={styles.text}>Environment: {Config.ENV}</Text> */}
 
           <View style={{ alignItems: 'center' }}>
             <View style={{
-              backgroundColor: getBackgroundColor(value),
+              backgroundColor,
               height: 100,
               width: 100,
               marginTop: 24

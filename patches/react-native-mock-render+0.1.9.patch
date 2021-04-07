@@ -1,0 +1,116 @@
+diff --git a/node_modules/react-native-mock-render/build/components/ART/Path.js b/node_modules/react-native-mock-render/build/components/ART/Path.js
+deleted file mode 100644
+index e9cfa13..0000000
+--- a/node_modules/react-native-mock-render/build/components/ART/Path.js
++++ /dev/null
+@@ -1,15 +0,0 @@
+-var className=require('art/core/class.js');
+-var Path=require('art/core/path.js');
+-
+-var SerializablePath=className(Path,{
+-initialize:function(){function initialize(path){}return initialize;}(),
+-onReset:function(){function onReset(){}return onReset;}(),
+-onMove:function(){function onMove(sx,sy,x,y){}return onMove;}(),
+-onLine:function(){function onLine(sx,sy,x,y){}return onLine;}(),
+-onBezierCurve:function(){function onBezierCurve(sx,sy,p1x,p1y,p2x,p2y,x,y){}return onBezierCurve;}(),
+-onArc:function(){function onArc(sx,sy,ex,ey,cx,cy,rx,ry,sa,ea,ccw,rotation){}return onArc;}(),
+-onClose:function(){function onClose(){}return onClose;}(),
+-toJSON:function(){function toJSON(){}return toJSON;}()});
+-
+-
+-module.exports=SerializablePath;
+\ No newline at end of file
+diff --git a/node_modules/react-native-mock-render/build/components/ART/Transform.js b/node_modules/react-native-mock-render/build/components/ART/Transform.js
+deleted file mode 100644
+index 425cd89..0000000
+--- a/node_modules/react-native-mock-render/build/components/ART/Transform.js
++++ /dev/null
+@@ -1,28 +0,0 @@
+-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var
+-Transform=function(){
+-function Transform(){_classCallCheck(this,Transform);
+-this.xx=0;
+-this.yx=0;
+-this.xy=0;
+-this.yy=0;
+-this.x=0;
+-this.y=0;
+-}_createClass(Transform,[{key:"transformTo",value:function(){function transformTo()
+-{
+-return this;
+-}return transformTo;}()},{key:"move",value:function(){function move()
+-{
+-return this;
+-}return move;}()},{key:"rotate",value:function(){function rotate()
+-{
+-return this;
+-}return rotate;}()},{key:"scale",value:function(){function scale()
+-{
+-return this;
+-}return scale;}()},{key:"transform",value:function(){function transform()
+-{
+-return this;
+-}return transform;}()}]);return Transform;}();
+-
+-
+-module.exports=Transform;
+\ No newline at end of file
+diff --git a/node_modules/react-native-mock-render/build/components/ART/index.js b/node_modules/react-native-mock-render/build/components/ART/index.js
+deleted file mode 100644
+index 62b2644..0000000
+--- a/node_modules/react-native-mock-render/build/components/ART/index.js
++++ /dev/null
+@@ -1,40 +0,0 @@
+-var _createMockComponent=require('../createMockComponent');var _createMockComponent2=_interopRequireDefault(_createMockComponent);
+-var _Transform=require('./Transform');var _Transform2=_interopRequireDefault(_Transform);
+-var _Path=require('./Path');var _Path2=_interopRequireDefault(_Path);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}
+-
+-var LINEAR_GRADIENT=1;
+-var RADIAL_GRADIENT=2;
+-var PATTERN=3;
+-
+-function CSSBackgroundPattern(){
+-// TODO(lmr):
+-return{};
+-}
+-
+-function Pattern(url,width,height,left,top){
+-this._brush=[PATTERN,url,+left||0,+top||0,+width,+height];
+-}
+-
+-function LinearGradient(stops,x1,y1,x2,y2){
+-this._brush=[LINEAR_GRADIENT,+x1,+y1,+x2,+y2];
+-}
+-
+-function RadialGradient(stops,fx,fy,rx,ry,cx,cy){
+-this._brush=[RADIAL_GRADIENT,+fx,+fy,+rx*2,+ry*2,+cx,+cy];
+-}
+-
+-var ReactART={
+-LinearGradient:LinearGradient,
+-RadialGradient:RadialGradient,
+-Pattern:Pattern,
+-Transform:_Transform2['default'],
+-Path:_Path2['default'],
+-Surface:(0,_createMockComponent2['default'])('Surface'),
+-Group:(0,_createMockComponent2['default'])('Group'),
+-ClippingRectangle:(0,_createMockComponent2['default'])('ClippingRectangle'),
+-Shape:(0,_createMockComponent2['default'])('Shape'),
+-Text:(0,_createMockComponent2['default'])('Text'),
+-CSSBackgroundPattern:CSSBackgroundPattern};
+-
+-
+-module.exports=ReactART;
+\ No newline at end of file
+diff --git a/node_modules/react-native-mock-render/build/react-native.js b/node_modules/react-native-mock-render/build/react-native.js
+index ec0606e..bb14c95 100644
+--- a/node_modules/react-native-mock-render/build/react-native.js
++++ b/node_modules/react-native-mock-render/build/react-native.js
+@@ -45,7 +45,6 @@ VibrationIOS:require('./api/VibrationIOS'),
+ // Components
+ ActivityIndicator:require('./components/ActivityIndicator'),
+ ActivityIndicatorIOS:require('./components/ActivityIndicatorIOS'),
+-ART:require('./components/ART'),
+ Button:(0,_createMockComponent2['default'])('Button'),
+ DatePickerIOS:(0,_createMockComponent2['default'])('DatePickerIOS'),
+ DrawerLayoutAndroid:require('./components/DrawerLayoutAndroid'),
