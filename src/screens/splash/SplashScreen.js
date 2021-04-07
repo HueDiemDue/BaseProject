@@ -15,14 +15,21 @@ const SplashScreen = props => {
 
   useNavigationAppearEvents(componentId, {
     componentDidAppear: () => {
-      setTimeout(() => {
-        setRootHomeScreen()
-      }, 2000)
+
     },
     componentDidDisappear: () => {
 
+    },
+    componentDidMount: () => {
+      directScreen()
     }
   })
+
+  directScreen = () => {
+    setTimeout(() => {
+      setRootHomeScreen()
+    }, 2000)
+  }
 
   return (
     <View style={styles.container}>
